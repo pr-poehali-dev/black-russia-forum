@@ -1,8 +1,7 @@
 
-import { ForumCategory, ForumTopic, ForumStats } from "../types/forum";
+import { ForumCategory, ForumTopic } from "@/types/forum";
 
-// Категории форума
-export const categories: ForumCategory[] = [
+export const forumCategories: ForumCategory[] = [
   {
     id: 1,
     name: "Новости проекта",
@@ -53,8 +52,7 @@ export const categories: ForumCategory[] = [
   }
 ];
 
-// Последние темы форума
-export const topics: ForumTopic[] = [
+export const forumTopics: ForumTopic[] = [
   {
     id: 1,
     title: "Обновление 2.5.0 - Список изменений",
@@ -104,10 +102,3 @@ export const topics: ForumTopic[] = [
     isHot: true
   }
 ];
-
-// Статистика форума
-export const stats: ForumStats = {
-  users: 24567,
-  messages: 137842,
-  online: 487
-};

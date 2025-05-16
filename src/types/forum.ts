@@ -19,9 +19,3 @@ export interface ForumTopic {
   isHot?: boolean;
   isAnnouncement?: boolean;
 }
-
-export interface ForumStats {
-  users: number;
-  messages: number;
-  online: number;
-}

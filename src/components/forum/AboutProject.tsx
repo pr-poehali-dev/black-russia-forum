@@ -1,5 +1,5 @@
 
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
@@ -18,21 +18,33 @@ const AboutProject = () => {
             Наш проект предлагает уникальный игровой опыт с множеством возможностей для развития персонажа.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <FeatureCard 
-              icon="Server" 
-              title="10+ серверов" 
-              description="Множество уникальных серверов с различными особенностями и игровым опытом" 
-            />
-            <FeatureCard 
-              icon="User" 
-              title="Развитие персонажа" 
-              description="Прокачивайте навыки, зарабатывайте на жизнь и строите карьеру в виртуальном мире" 
-            />
-            <FeatureCard 
-              icon="Users" 
-              title="Активное сообщество" 
-              description="Присоединяйтесь к тысячам игроков и участвуйте в жизни виртуального города" 
-            />
+            <div className="bg-[#252525] p-4 rounded-lg">
+              <h3 className="font-medium mb-2 flex items-center">
+                <Icon name="Server" className="text-[#E50914] mr-2 h-5 w-5" />
+                10+ серверов
+              </h3>
+              <p className="text-sm text-gray-400">
+                Множество уникальных серверов с различными особенностями и игровым опытом
+              </p>
+            </div>
+            <div className="bg-[#252525] p-4 rounded-lg">
+              <h3 className="font-medium mb-2 flex items-center">
+                <Icon name="User" className="text-[#E50914] mr-2 h-5 w-5" />
+                Развитие персонажа
+              </h3>
+              <p className="text-sm text-gray-400">
+                Прокачивайте навыки, зарабатывайте на жизнь и строите карьеру в виртуальном мире
+              </p>
+            </div>
+            <div className="bg-[#252525] p-4 rounded-lg">
+              <h3 className="font-medium mb-2 flex items-center">
+                <Icon name="Users" className="text-[#E50914] mr-2 h-5 w-5" />
+                Активное сообщество
+              </h3>
+              <p className="text-sm text-gray-400">
+                Присоединяйтесь к тысячам игроков и участвуйте в жизни виртуального города
+              </p>
+            </div>
           </div>
         </CardContent>
         <CardFooter className="justify-center">
@@ -42,26 +54,6 @@ const AboutProject = () => {
           </Button>
         </CardFooter>
       </Card>
-    </div>
-  );
-};
-
-interface FeatureCardProps {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
-  return (
-    <div className="bg-[#252525] p-4 rounded-lg">
-      <h3 className="font-medium mb-2 flex items-center">
-        <Icon name={icon} className="text-[#E50914] mr-2 h-5 w-5" />
-        {title}
-      </h3>
-      <p className="text-sm text-gray-400">
-        {description}
-      </p>
     </div>
   );
 };
